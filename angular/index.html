@@ -1,0 +1,33 @@
+<html>
+<head>
+  <script type="text/javascript" src="angular.min.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+</head>
+<body ng-app="myApp">
+  <div ng-controller="myController">
+    <input ng-model="myModel">
+    <p>{{myModel}}</p>
+  </div>
+  <div ng-controller="mynewController">
+    <button ng-click="clicked();">Click me</button>
+  </div>
+  <div ng-controller="mynewController2">
+    <button ng-click="click();">Click me 2 for services</button>
+  </div>
+  <div ng-controller="mynewController3">
+    <input ng-model="radius">
+    <button ng-click="getarea();">Click me for area</button>
+  </div>
+  <div ng-controller="mynewController4">
+    <input type="checkbox" ng-model="showDiv">
+    <div ng-if="showDiv">My Div</div>
+  </div>
+  <div ng-controller="mynewController5">
+    <ul>
+      <li ng-repeat="student in students">
+        {{student.name}} : {{student.section}}
+      </li>
+    </ul>
+  </div>
+</body>
+</html>
